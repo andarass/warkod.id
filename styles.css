@@ -13,58 +13,155 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    background: linear-gradient(to right, #0c0c0c, #222222); /* Default background color */
+    color: white;
+    transition: background 0.3s ease;
+    position: sticky; /* Keeps header fixed at the top */
+    top: 0;
+    z-index: 1000; /* Ensures header stays on top of other content */
 }
 
+/* Left side of the header */
 .header-left {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 40px;
+    max-height: 50px;
+    margin-right: 20px;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: white;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Show the underline on hover */
+}
+
+/* Right side of the header */
 .header-right {
     display: flex;
     align-items: center;
 }
 
-.language-switcher button, .theme-switcher button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
+.language-switcher,
+.theme-switcher {
+    display: flex;
+    margin-right: 20px;
 }
 
-.language-switcher button:hover, .theme-switcher button:hover {
-    opacity: 0.7;
+button {
+    background: none;
+    border: 1px solid #fff;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
+button:hover {
+    border-style: inset;
+    background-color: #fff;
+    color: #222222;
+}
+
+/* Sticky header color change */
+header.sticky {
+    background: white; /* Change to white when scrolled */
+    color: #333; /* Change text color to dark for better visibility */
+}
+
+header.sticky nav ul li a {
+    color: #333; /* Change text color for links in the sticky header */
+}
+
+header.sticky nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #222222;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+header.sticky nav ul li a:hover::after {
+    width: 100%; /* Show the underline on hover */
+}
+
+header.sticky button {
+    color: #222222; /* Hover color change */
+    border: 1px solid #222222;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left {
+        margin-bottom: 20px;
+    }
+
+    .header-right {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
 
 /* Hero Section */
 .hero-container {
@@ -79,7 +176,7 @@ nav ul li a {
 .hero {
     background: linear-gradient(to right, #0c0c0c, #222222);
     color: #fff;
-    padding: 150px 0;
+    padding: 0;
 }
 
 .hero h1 {
@@ -119,13 +216,21 @@ nav ul li a {
 }
 
 .cta-button:hover {
-    background-color: #007BFF;
+    border-style: inset;
+    background-color: #222222;
     color: #fff;
+}
+
+.hero-image {
+    position: relative;
+    margin-right: -70px;
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
+    margin: 0;
+    padding: 0;
     border-radius: 10px;
 }
 

@@ -1,3 +1,18 @@
+// JavaScript to add sticky class on scroll
+window.onscroll = function() {toggleStickyHeader()};
+
+var header = document.querySelector("header");
+var sticky = header.offsetTop;
+
+function toggleStickyHeader() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
+
 // Toggle Menu untuk Mobile
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('active');
@@ -39,3 +54,4 @@ document.getElementById('light-mode').addEventListener('click', function() {
     document.body.style.backgroundColor = '#fff';
     document.body.style.color = '#333';
 });
+
