@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iBox - Solusi Teknologi untuk Bisnis Anda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="#">Portofolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="language-switcher">
+                <button id="lang-en">EN</button>
+                <button id="lang-id">ID</button>
+            </div>
+            <div class="theme-switcher">
+                <button id="dark-mode">🌙</button>
+                <button id="light-mode">☀️</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">Solusi Teknologi untuk Bisnis Anda</h1>
+                <p class="animate__animated animate__fadeInUp">Kami menyediakan layanan pembuatan website, aplikasi desktop, dan aplikasi mobile yang inovatif dan berkualitas tinggi.</p>
+                <a href="#services" class="cta-button animate__animated animate__fadeInUp">Pelajari Lebih Lanjut</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.jpg" alt="Solusi Teknologi">
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="animate__animated">Layanan Kami</h2>
+            <div class="service-list">
+                <div class="service-item animate__animated">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Pembuatan Website</h3>
+                    <p>Website responsif dan modern untuk kebutuhan bisnis Anda.</p>
+                </div>
+                <div class="service-item animate__animated">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Aplikasi Desktop</h3>
+                    <p>Aplikasi desktop yang powerful dan mudah digunakan.</p>
+                </div>
+                <div class="service-item animate__animated">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Aplikasi Mobile</h3>
+                    <p>Aplikasi mobile untuk platform iOS dan Android.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="animate__animated">Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate__animated">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="overlay">
+                        <p>Project 1</p>
+                        <a href="#" class="view-button">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="portfolio-item animate__animated">
+                    <img src="project2.jpg" alt="Project 2">
+                    <div class="overlay">
+                        <p>Project 2</p>
+                        <a href="#" class="view-button">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="portfolio-item animate__animated">
+                    <img src="project3.jpg" alt="Project 3">
+                    <div class="overlay">
+                        <p>Project 3</p>
+                        <a href="#" class="view-button">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="animate__animated">Tentang Kami</h2>
+            <p class="animate__animated">iBox adalah perusahaan teknologi yang berfokus pada pengembangan solusi digital untuk bisnis. Dengan tim profesional yang berpengalaman, kami siap membantu Anda mencapai tujuan bisnis melalui teknologi terkini.</p>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="animate__animated">Hubungi Kami</h2>
+            <form id="contact-form" class="animate__animated">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tentang iBox</h3>
+                    <p>iBox adalah perusahaan teknologi yang menyediakan solusi digital untuk bisnis Anda.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <p>Email: info@ibox.co.id</p>
+                    <p>Telepon: +62 123 4567 890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 iBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
