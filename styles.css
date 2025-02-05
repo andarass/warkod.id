@@ -133,8 +133,14 @@ header.sticky nav ul li a:hover::after {
 }
 
 header.sticky button {
-    color: #222222; /* Hover color change */
+    color: #222222; 
     border: 1px solid #222222;
+}
+
+header.sticky button:hover {
+    border-style: inset;
+    background-color: #222222; /* Hover color change */
+    color: #fff;
 }
 
 /* Media Query for responsiveness */
@@ -232,6 +238,14 @@ header.sticky button {
     margin: 0;
     padding: 0;
     border-radius: 10px;
+}
+
+/* Background Transition */
+.background-transition {
+    width: 100%; /* Agar gambar mengisi lebar layar */
+    height: auto; /* Menjaga proporsi gambar */
+    display: block; /* Menghilangkan jarak bawah otomatis dari gambar */
+    margin-top: -450px; /* Menambahkan jarak di atas dan bawah gambar pembatas */
 }
 
 /* Services Section */
@@ -452,4 +466,9 @@ footer .footer-bottom {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #444;
+}
+
+/* Smooth Scroll Transition */
+html {
+    scroll-behavior: smooth;
 }

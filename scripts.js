@@ -12,7 +12,6 @@ function toggleStickyHeader() {
     }
 }
 
-
 // Toggle Menu untuk Mobile
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('active');
@@ -55,3 +54,11 @@ document.getElementById('light-mode').addEventListener('click', function() {
     document.body.style.color = '#333';
 });
 
+// JavaScript to scroll on subject
+document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
+    e.preventDefault(); // Mencegah link biasa (default)
+    
+    document.querySelector('#about').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
