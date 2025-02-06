@@ -18,12 +18,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#services">Layanan</a></li>
-                    <li><a href="#portfolio">Portofolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Karir</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="#">Portofolio</a></li>
+                    <li><a href="#">Kontak</a></li>
                 </ul>
             </nav>
         </div>
@@ -90,25 +88,47 @@
         </div>
         <div class="container-porto">
             <h2 class="animate__animated">Portfolio</h2>
+            <p class="animate__animated">Proyek berikut dirancang untuk meningkatkan pengalaman pengguna dan memperkuat sebuah brand. <br> Bersama kami, proyek anda akan mendapatkan sentuhan profesional yang tepat.</p>
             <div class="portfolio-grid">
                 <div class="portfolio-item animate__animated">
                     <img src="assets/project 1.png" alt="Project 1">
                     <div class="overlay">
-                        <p>Project 1</p>
+                        <p>Silva Beauty</p>
                         <a href="#" class="view-button">Lihat Detail</a>
                     </div>
                 </div>
                 <div class="portfolio-item animate__animated">
                     <img src="assets/project 2.png" alt="Project 2">
                     <div class="overlay">
-                        <p>Project 2</p>
+                        <p>Big Burger</p>
                         <a href="#" class="view-button">Lihat Detail</a>
                     </div>
                 </div>
                 <div class="portfolio-item animate__animated">
                     <img src="assets/project 3.png" alt="Project 3">
                     <div class="overlay">
-                        <p>Project 3</p>
+                        <p>Buiva Skin</p>
+                        <a href="#" class="view-button">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="portfolio-item animate__animated">
+                    <img src="assets/project 4.png" alt="Project 1">
+                    <div class="overlay">
+                        <p>Borcelle Hotel</p>
+                        <a href="#" class="view-button">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="portfolio-item animate__animated">
+                    <img src="assets/project 5.png" alt="Project 2">
+                    <div class="overlay">
+                        <p>Cretia Furniture</p>
+                        <a href="#" class="view-button">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="portfolio-item animate__animated">
+                    <img src="assets/project 6.png" alt="Project 3">
+                    <div class="overlay">
+                        <p>Larana Fashion</p>
                         <a href="#" class="view-button">Lihat Detail</a>
                     </div>
                 </div>
@@ -131,52 +151,103 @@
 
     <!-- Kontak -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="animate__animated">Hubungi Kami</h2>
-            <form id="contact-form" class="animate__animated">
-                <div class="form-group">
-                    <label for="name">Nama:</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="contact-container">
+            <!-- Informasi Kontak (Sebelah Kiri) -->
+            <div class="contact-info">
+                <h1>Konsultasi Gratis</h1>
+                <p>Kami akan senang mendengarnya jika anda tertarik bekerjasama! Apa mungkin anda memiliki pertanyaan, masukan, atau hanya sekedar ingin menyapa? Jangan ragu untuk menghubungi kami.</p>
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>support@mediaproper.com</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="info-item">
+                    <h3>Seluler</h3>
+                    <p>+1 (123) 456-7890</p>
                 </div>
-                <div class="form-group">
-                    <label for="message">Pesan:</label>
-                    <textarea id="message" name="message" required></textarea>
+                <div class="info-item">
+                    <h3>Alamat</h3>
+                    <p>123 Media Street, Creative City, CA 12345, USA</p>
                 </div>
-                <button type="submit">Kirim Pesan</button>
-            </form>
+            </div>
+
+            <!-- Form Kontak (Sebelah Kanan) -->
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subyek</label>
+                        <input type="text" id="subject" name="subject" placeholder="Masukkan subyek anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Masukkan pesan anda" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Tentang Warkod.id</h3>
-                    <p>Warkod.id adalah perusahaan teknologi yang menyediakan solusi digital untuk bisnis Anda.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Bagian Logo: Logo dan Deskripsi -->
+            <div class="footer-logo">
+                <div class="footer-img">
+                    <img src="assets/footer-logo.png" alt="MediaProper Logo">
                 </div>
-                <div class="footer-section">
-                    <h3>Kontak</h3>
-                    <p>Email: info@warkod.co.id</p>
-                    <p>Telepon: +62 123 4567 890</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Ikuti Kami</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <p class="footer-description">
+                    MediaProper is a creative agency specializing in digital marketing, branding, and web development.
+                </p>
+            </div>
+
+            <!-- Bagian Kiri: Kontak -->
+            <div class="footer-left">
+                <h3>Alamat</h3>
+                <ul class="footer-contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Media Street, Creative City, CA 12345, USA</li>
+                </ul>
+                <h3>Kontak</h3>
+                <ul class="footer-contact-info">
+                    <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> support@mediaproper.com</li>
+                </ul>
+            </div>
+
+            <!-- Bagian Tengah: Link Cepat -->
+            <div class="footer-middle">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Bagian Kanan: Kontak -->
+            <div class="footer-right">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Warkod. All rights reserved.</p>
-            </div>
+        </div>
+
+        <!-- Bagian Bawah: Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Warkod. All Rights Reserved.</p>
         </div>
     </footer>
 

@@ -306,7 +306,7 @@ header.sticky button:hover {
 .wave svg {
     position: relative;
     display: block;
-    width: 100%;
+    width: calc(145% + 1.3px);
     height: 150px;
 }
 
@@ -319,15 +319,24 @@ header.sticky button:hover {
     background: #0c0c0c;
     width: 100%;
     padding-top: 50px;  /* Memberi sedikit ruang agar tidak tertutup wave */
+    padding-left: 0;
+    padding-bottom: 50px;
 }
 
 .portfolio {
-    padding: 60px 20px 0;  /* Padding atas yang lebih besar agar tidak tertutup wave */
+    padding: 60px 0 0;  /* Padding atas yang lebih besar agar tidak tertutup wave */
     text-align: center;
 }
 
 .portfolio h2 {
     font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.portfolio p {
+    font-size: 15px;
+    padding-top: 0;
     margin-bottom: 60px;
     color: #fff;
 }
@@ -362,7 +371,7 @@ header.sticky button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 123, 255, 0.8);
+    background-color: rgba(78, 78, 78, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -383,7 +392,7 @@ header.sticky button:hover {
 
 .portfolio-item .overlay .view-button {
     background-color: #fff;
-    color: #007BFF;
+    color: #222222;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -392,24 +401,24 @@ header.sticky button:hover {
 }
 
 .portfolio-item .overlay .view-button:hover {
-    background-color: #007BFF;
+    background-color: #222222;
     color: #fff;
 }
 
 /* Wave 2 - Di bawah Portfolio */
 .wave-2 {
-    position: absolute;
-    bottom: 0;  /* Pastikan wave 2 berada di bawah section portfolio */
+    bottom: 0;  /* Menempatkan wave 2 di bawah section portfolio */
     left: 0;
     width: 100%;  /* Lebar wave 2 mengikuti lebar layar */
     overflow: hidden;
     line-height: 0;
+    z-index: 1;  /* Menjaga wave 2 di bawah konten portfolio */
 }
 
 .wave-2 svg {
     position: relative;
     display: block;
-    width: 100%;  /* Membuat wave memenuhi lebar layar */
+    width: calc(145% + 1.3px);  /* Membuat wave memenuhi lebar layar */
     height: 150px;  /* Tinggi wave kedua */
 }
 
@@ -430,94 +439,267 @@ header.sticky button:hover {
 
 /* Contact Section */
 .contact {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.contact form {
-    max-width: 600px;
+    padding: 50px 20px;
+    background-color: #fff;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.contact .form-group {
+.contact-container {
+    display: flex;
+    gap: 40px; /* Jarak antara informasi kontak dan form */
+}
+
+/* Informasi Kontak (Sebelah Kiri) */
+.contact-info {
+    flex: 1; /* Mengisi 50% dari container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #666;
     margin-bottom: 20px;
 }
 
-.contact label {
-    display: block;
-    margin-bottom: 10px;
+.info-item {
+    margin-bottom: 20px;
 }
 
-.contact input, .contact textarea {
+.info-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Form Kontak (Sebelah Kanan) */
+.contact-form {
+    flex: 1; /* Mengisi 50% dari container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #fff;
     transition: border-color 0.3s ease;
 }
 
-.contact input:focus, .contact textarea:focus {
-    border-color: #007BFF;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
 }
 
-.contact button {
-    background-color: #007BFF;
+.submit-btn {
+    background-color: #3498db;
     color: #fff;
-    padding: 15px 30px;
+    padding: 12px 24px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.contact button:hover {
-    background-color: #0056b3;
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsif untuk Layar Kecil */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Mengubah layout menjadi vertikal */
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 100%; /* Mengisi 100% lebar pada layar kecil */
+    }
 }
 
 /* Footer */
-footer {
-    background-color: #333;
+.footer {
+    background-color: #0C0C0C;
     color: #fff;
-    padding: 60px 0;
+    padding: 40px 20px;
 }
 
-footer .footer-content {
+.footer-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-footer .footer-section {
-    width: 30%;
-    margin-bottom: 30px;
+/* Bagian Logo: Logo dan Deskripsi */
+.footer-logo {
+    flex: 1.5;
+    min-width: 250px;
 }
 
-footer .footer-section h3 {
-    margin-bottom: 20px;
+.footer-img img {
+    width: 150px;
+    height: auto;
 }
 
-footer .social-links a {
+.footer-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #bdc3c7;
+}
+
+/* Bagian Kiri: Kontak */
+.footer-left {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+    background: #0C0C0C;
+}
+
+.footer-contact-info li {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
     color: #fff;
-    margin-right: 15px;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-info i {
+    font-size: 1rem;
+    color: #3498db;
+}
+
+/* Bagian Tengah: Link Cepat */
+.footer-middle {
+    flex: 0.5;
+    min-width: 150px;
+}
+
+.footer-middle h3,
+.footer-right h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
-footer .social-links a:hover {
-    color: #007BFF;
+.footer-links a:hover {
+    color: #3498db;
 }
 
-footer .footer-bottom {
+/* Bagian Kanan: Kontak */
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .social-icon {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+    color: #3498db;
+}
+
+/* Bagian Bawah: Copyright */
+.footer-bottom {
     text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #34495e;
     margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* Responsif untuk Layar Kecil */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-links,
+    .contact-info {
+        text-align: center;
+    }
 }
 
 /* Smooth Scroll Transition */

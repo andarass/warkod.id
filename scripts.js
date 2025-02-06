@@ -62,3 +62,45 @@ document.querySelector('a[href="#about"]').addEventListener('click', function(e)
         behavior: 'smooth'
     });
 });
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Mencegah form dari pengiriman default
+
+    // Ambil nilai dari form
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Validasi sederhana
+    if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Kirim data (contoh: menggunakan fetch API)
+    const formData = {
+        name,
+        email,
+        subject,
+        message,
+    };
+
+    // Contoh pengiriman data ke backend
+    fetch('https://example.com/submit-contact-form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            alert('Message sent successfully!');
+            document.getElementById('contactForm').reset(); // Reset form
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        });
+});
