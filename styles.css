@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -111,6 +111,7 @@ button:hover {
 header.sticky {
     background: white; /* Change to white when scrolled */
     color: #333; /* Change text color to dark for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header.sticky nav ul li a {
@@ -290,15 +291,45 @@ header.sticky button:hover {
     margin-bottom: 10px;
 }
 
+/* Wave */
+.wave {
+    position: relative;  /* Mengatur posisi relatif untuk kontrol lebih lanjut */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 1;  /* Menjaga agar wave tetap di bawah konten */
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+}
+
+.wave .shape-fill {
+    fill: #0c0c0c;
+}
+
 /* Portfolio Section */
+.container-porto {
+    background: #0c0c0c;
+    width: 100%;
+    padding-top: 50px;  /* Memberi sedikit ruang agar tidak tertutup wave */
+}
+
 .portfolio {
-    padding: 80px 0;
+    padding: 60px 20px 0;  /* Padding atas yang lebih besar agar tidak tertutup wave */
     text-align: center;
 }
 
 .portfolio h2 {
     font-size: 36px;
     margin-bottom: 60px;
+    color: #fff;
 }
 
 .portfolio-grid {
@@ -363,6 +394,27 @@ header.sticky button:hover {
 .portfolio-item .overlay .view-button:hover {
     background-color: #007BFF;
     color: #fff;
+}
+
+/* Wave 2 - Di bawah Portfolio */
+.wave-2 {
+    position: absolute;
+    bottom: 0;  /* Pastikan wave 2 berada di bawah section portfolio */
+    left: 0;
+    width: 100%;  /* Lebar wave 2 mengikuti lebar layar */
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-2 svg {
+    position: relative;
+    display: block;
+    width: 100%;  /* Membuat wave memenuhi lebar layar */
+    height: 150px;  /* Tinggi wave kedua */
+}
+
+.wave-2 .shape-fill {
+    fill: #0C0C0C;  /* Warna wave kedua */
 }
 
 /* About Section */
