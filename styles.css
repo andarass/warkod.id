@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,7 +34,7 @@ header {
 }
 
 .logo img {
-    max-height: 50px;
+    max-height: 70px;
     margin-right: 20px;
 }
 
@@ -198,6 +198,7 @@ header.sticky button:hover {
 
 .hero-content {
     max-width: 600px;
+    margin-top: -50px; /* Menggeser konten ke atas */
 }
 
 .hero-content h1 {
@@ -209,8 +210,40 @@ header.sticky button:hover {
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #fff;
+    color: #d6d6d6;
 }
+
+.highlight {
+    background-color: #fff;  /* Warna latar belakang putih */
+    color: #222222;             /* Warna teks hitam */
+    padding: 1px 10px;       /* Memberikan ruang di sekitar teks */
+    border-radius: 10px;      /* Menambahkan sudut yang melengkung */
+    margin-left: 10px;
+}
+  
+
+.hero ul {
+    list-style-type: none; /* Menghapus bullet points default */
+    padding-left: 0;       /* Menghapus padding kiri */
+    margin: 0;             /* Menghapus margin jika ada */
+    margin-bottom: 40px;
+}
+  
+.hero li {
+    color: #d6d6d6;              /* Mengubah warna teks menjadi putih */
+    font-size: 18px;          /* Menyesuaikan ukuran font sesuai kebutuhan */
+    line-height: 1.5;         /* Memberikan jarak antar baris */
+    margin-bottom: 10px;      /* Memberikan jarak antar item dalam list */
+    display: flex;
+    align-items: center;      /* Menyelaraskan ikon dan teks secara vertikal */
+}
+  
+.hero li i {
+    color: #d6d6d6;              /* Mengubah warna ikon menjadi putih */
+    margin-right: 10px;       /* Memberikan jarak antara ikon dan teks */
+    font-size: 22px;          /* Menyesuaikan ukuran ikon */
+}
+  
 
 .cta-button {
     background-color: #fff;
@@ -235,6 +268,7 @@ header.sticky button:hover {
 
 .hero-image img {
     max-width: 100%;
+    max-height: 500px;
     height: auto;
     margin: 0;
     padding: 0;
@@ -510,7 +544,7 @@ header.sticky button:hover {
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -582,7 +616,7 @@ header.sticky button:hover {
     font-size: 0.9rem;
     line-height: 1.6;
     margin: 20px 0;
-    color: #bdc3c7;
+    color: #858585;
 }
 
 /* Bagian Kiri: Kontak */
@@ -600,7 +634,7 @@ header.sticky button:hover {
 .footer-contact-info li {
     margin-bottom: 15px;
     font-size: 0.9rem;
-    color: #fff;
+    color: #858585;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -634,7 +668,7 @@ header.sticky button:hover {
 }
 
 .footer-links a {
-    color: #bdc3c7;
+    color: #858585;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
@@ -656,7 +690,7 @@ header.sticky button:hover {
 }
 
 .social-icons .social-icon {
-    color: #fff;
+    color: #858585;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
@@ -676,7 +710,7 @@ header.sticky button:hover {
 .footer-bottom p {
     margin: 0;
     font-size: 0.9rem;
-    color: #bdc3c7;
+    color: #858585;
 }
 
 /* Responsif untuk Layar Kecil */
