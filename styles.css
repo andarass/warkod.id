@@ -326,6 +326,43 @@ header.sticky button:hover {
   margin-bottom: 10px;
 }
 
+.development {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.development h2 {
+  font-size: 36px;
+}
+
+.stages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stage {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stage:hover {
+  transform: translateY(-5px);
+}
+
+.stage i {
+  font-size: 30px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+
 /* Wave */
 .wave {
   position: relative; /* Mengatur posisi relatif untuk kontrol lebih lanjut */
