@@ -104,3 +104,21 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
             alert('An error occurred. Please try again.');
         });
 });
+
+document.querySelectorAll('.team-card').forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+    });
+    card.addEventListener('mouseout', () => {
+        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+    });
+});
+
+// Untuk bagian Paket Penawaran
+function highlightCard(card) {
+    card.style.boxShadow = "0px 6px 15px rgba(0, 0, 0, 0.2)";
+}
+
+function resetCard(card) {
+    card.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.1)";
+}
